@@ -1,8 +1,7 @@
 /*
   Aplicación interactiva HealthySmile Lab:
-  Detecta la apertura de la boca con face-api.js y genera partículas sobre los dientes.
-  Al completar el temporizador, congela una captura de la sonrisa con gafas virtuales,
-  muestra mensajes motivadores y permite guardar la imagen. Incluye música de fondo.
+  Se encarga de detectar la apertura de la boca con face-api.js y genera unas partículas sobre los dientes.
+  Cuando se completa el temporizador, congela una captura de la sonrisa con las gafas virtuales.
 */
 
 // Declaración de variables principales
@@ -52,8 +51,7 @@ async function setup() {
 
   await Promise.all([
     faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-    faceapi.nets.faceLandmark68TinyNet.loadFromUri('/models'),
-    faceapi.nets.tinyYolov2.loadFromUri('/models') 
+    faceapi.nets.faceLandmark68TinyNet.loadFromUri('/models')
   ]);
 
   gafasSeleccionadas = random(imagenGafas);
