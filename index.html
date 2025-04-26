@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>HealthySmile Lab</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@1.0.2/dist/face-api.min.js"></script>
+</head>
+<body>
+  <main>
+    <!-- Controles de tiempo -->
+    <div id="controlador">
+      <label for="tiempo">Tiempo:</label>
+      <select id="tiempo">
+        <option value="15">15 segundos</option>
+        <option value="30">30 segundos</option>
+        <option value="60">60 segundos</option>
+        <option value="120">2 minutos</option>
+      </select>
+      <button id="botonControl">Iniciar</button>
+    </div>
+
+    <!-- Muestro el header principal -->
+    <h1>ES HORA DE LAVAR TUS DIENTES</h1>
+    <p id="frase"></p> 
+    <p id="temporizador">Tiempo restante: 30s</p>
+
+    <!-- Cargo el canva -->
+    <div id="canvas-container"></div>
+
+    <!-- Muestro el mensaje final -->
+    <div id="mensajeFinal" style="display: none;">
+      🎉 ¡Buen trabajo! ¡Sonríe siempre! 😁
+    </div>
+
+    <!-- Guardo la captura para gamificar a los niños -->
+    <div id="datosFinales" style="display: none;">
+      <p id="fechaActual"></p>
+      <button id="guardarCaptura">📸 Guardar mi sonrisa</button>
+    </div>
+  </main>
+  <script src="sketch.js"></script>
+</body>
+</html>

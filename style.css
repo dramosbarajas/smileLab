@@ -1,0 +1,137 @@
+/* Estilos generales del body */
+body {
+  margin: 0;
+  padding: 0; 
+  background-color: #000; 
+  color: white; 
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
+  text-align: center; 
+  overflow: hidden; 
+}
+
+/* Estilo del título principal */
+h1 {
+  margin-top: 10px; 
+  font-size: 2em; 
+  color: #00e6e6; 
+}
+
+/* Estilo de la frase motivacional*/
+#frase {
+  font-size: 1.2em; 
+  margin-bottom: 10px;
+}
+
+/* Temporizador */
+#temporizador {
+  font-size: 3em; 
+  color: #ffcc00; 
+  animation: pulso 1s infinite; 
+  margin-bottom: 20px; 
+}
+
+/* Definición de la animación 'pulso' */
+@keyframes pulso {
+  0% { transform: scale(1); opacity: 1; } 
+  50% { transform: scale(1.15); opacity: 0.85; } 
+  100% { transform: scale(1); opacity: 1; } 
+}
+
+/* Estilo para el canvas dentro de su contenedor */
+#canvas-container canvas {
+  border: none; 
+  display: block; 
+  margin: auto; 
+}
+
+
+#controlador {
+  position: absolute; 
+  top: 20px; 
+  left: 20px; 
+  background: #fff5cc; 
+  padding: 12px 16px; 
+  border-radius: 12px; 
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); 
+  font-size: 1em; 
+  z-index: 10; 
+}
+
+/* Estilo para etiquetas dentro del controlador */
+#controlador label {
+  font-weight: bold; 
+  margin-right: 8px; 
+  color: #aa7700; 
+}
+/* Estilo para selectores y botones dentro del controlador */
+#controlador select, #controlador button {
+  font-size: 1em; 
+  padding: 6px 10px; 
+  border-radius: 6px; 
+  border: none; 
+  margin-left: 4px; 
+}
+
+/* Estilo específico para los botones del controlador de tienmopos*/
+#controlador button {
+  background-color: #ffcc00;
+  color: #222; 
+  font-weight: bold; 
+  cursor: pointer; 
+  transition: transform 0.2s ease; 
+}
+
+/* Efecto al pasar el ratón sobre los botones */
+#controlador button:hover {
+  transform: scale(1.05); 
+}
+
+/* Estilo del mensaje final (al completar) */
+#mensajeFinal {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  font-size: 2em; 
+  background: #00e6e6;
+  padding: 20px; 
+  border-radius: 16px; 
+  color: #fff; 
+  font-weight: bold; 
+  animation: pulso 1s infinite; 
+  z-index: 15; 
+}
+
+/* Estilo para los datos mostrados al final */
+#datosFinales {
+  position: absolute; 
+  top: 70%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  text-align: center; 
+  background: #fff5cc; 
+  color: #333; 
+  padding: 16px; 
+  border-radius: 16px; 
+  box-shadow: 0 0 20px rgba(0,0,0,0.3); 
+  z-index: 15; 
+}
+
+
+/* Estilo del botón para guardar una captura */
+#guardarCaptura {
+  margin-top: 10px; /* Separación superior */
+  font-size: 1.2em; /* Tamaño de letra grande */
+  background-color: #ffcc00; /* Fondo amarillo */
+  color: #222; /* Texto gris oscuro */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Relleno interno */
+  border-radius: 12px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo mano */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Efecto al pasar el ratón sobre el botón de guardar captura */
+#guardarCaptura:hover {
+  background-color: #ffee66; /* Cambio de color a un amarillo más claro */
+}
