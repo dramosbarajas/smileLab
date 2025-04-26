@@ -52,7 +52,8 @@ async function setup() {
 
   await Promise.all([
     faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-    faceapi.nets.faceLandmark68TinyNet.loadFromUri('/models')
+    faceapi.nets.faceLandmark68TinyNet.loadFromUri('/models'),
+    faceapi.nets.tinyYolov2.loadFromUri('/models') 
   ]);
 
   gafasSeleccionadas = random(imagenGafas);
