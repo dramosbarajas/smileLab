@@ -49,9 +49,21 @@ async function setup() {
   video.size(anchoVideo, altoVideo);
   video.hide();
 
-  await Promise.all([
+  /* await Promise.all([
     faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
     faceapi.nets.faceLandmark68TinyNet.loadFromUri('/models')
+  ]); */
+
+  await Promise.all([
+    faceapi.nets.ssdMobilenetv1.loadFromUri('/models'), 
+    faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
+    faceapi.nets.mtcnn.loadFromUri('/models'),          
+    faceapi.nets.faceLandmark68Net.loadFromUri('/models'), 
+    faceapi.nets.faceLandmark68TinyNet.loadFromUri('/models'), 
+    faceapi.nets.faceRecognitionNet.loadFromUri('/models'),  
+    faceapi.nets.faceExpressionNet.loadFromUri('/models'),    
+    faceapi.nets.ageGenderNet.loadFromUri('/models'),        
+    faceapi.nets.tinyYolov2.loadFromUri('/models')           
   ]);
 
   gafasSeleccionadas = random(imagenGafas);
